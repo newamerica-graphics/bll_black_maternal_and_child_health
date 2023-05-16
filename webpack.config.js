@@ -11,26 +11,22 @@ module.exports = env => {
       filename: `bundle.${env.deploy ? "[contenthash]." : ""}js`
     },
     externals: {
-      react: "React",
-      "react-dom": "ReactDOM",
-      redux: "Redux",
-      "react-redux": "ReactRedux",
       newamericadotorg: "newamericadotorg"
     },
     plugins: [
       env.deploy === "development" && new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         title: "",
-        chartIDs: [],
+        chartIDs: [
+          'viz__id'
+        ],
         inject: false,
         template: path.resolve(__dirname, "src/index.html")
       }),
       env.deploy &&
         new CompressionPlugin({
           test: /\.(js|css)$/,
-          filename: "[path].gz[query]",
-          algorithm: "gzip",
-          deleteOriginalAssets: false
+          filename: "[file].gz[query]"
         })
     ].filter(plugin => plugin),
     module: {
@@ -38,13 +34,15 @@ module.exports = env => {
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loaders: "babel-loader",
-          options: {
-            presets: ["@babel/env", "@babel/preset-react"],
-            plugins: [
-              "@babel/plugin-proposal-class-properties",
-              "@babel/plugin-proposal-object-rest-spread"
-            ]
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/env", "@babel/preset-react"],
+              plugins: [
+                "@babel/plugin-proposal-class-properties",
+                "@babel/plugin-proposal-object-rest-spread"
+              ]
+            }
           }
         },
         {
@@ -55,10 +53,14 @@ module.exports = env => {
             {
               loader: "postcss-loader",
               options: {
-                plugins: loader => [
-                  require("autoprefixer")(),
-                  require("cssnano")()
-                ]
+                postcssOptions: {
+                  plugins: [
+                    "autoprefixer",
+                    require('cssnano')({
+                      preset: 'default'
+                    })
+                  ]
+                }
               }
             },
             "sass-loader"
