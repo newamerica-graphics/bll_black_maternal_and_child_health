@@ -1,41 +1,60 @@
 const colors = {
-  turquoise: {
-    very_light: "#97DED9",
-    very_light_2: "#62CDC6",
-    light: "#2EBCB3",
-    medium: "#1A8A84",
-    dark: "#005753"
+  white: "#FFFFFF",
+  black: "#2c2f35",
+  grey: {
+    chart_background: "#EFEFEF",
+    lightest: "#EAEAEA",
+    light: "#D6D6D6",
+    medium: "#A3A3A3",
+    dark: "#717171",
+    darker: "#515151",
+    darkest: "#333333",
+  },
+  teal: {
+    lightest: "#BAEEEA",
+    light: "#77D6D0",
+    medium: "#2FBCB3",
+    dark: "#209B93",
+    darker: "#107C74",
+    darkest: "#005E57",
   },
   blue: {
-    very_light: "#ADD2ED",
-    very_light_2: "#84BBE4",
-    light: "#5BA4DA",
-    medium: "#4378A0",
-    dark: "#234A67",
-    very_dark: "#1B384E"
+    lightest: "#A0CBED",
+    light: "#5DA7E4",
+    medium: "#1185E0",
+    dark: "#0E6DB6",
+    darker: "#055795",
+    darkest: "#004275",
   },
-  red: { light: "#E75C64", medium: "#A64046", dark: "#692025" },
+  red: {
+    lightest: "#FFB9BC",
+    light: "#FE7F85",
+    // medium: "#F33F47", too bright
+    medium: "#eb4a52",
+    dark: "#D83136",
+    darker: "#C01E22",
+    darkest: "#AB0009",
+  },
   purple: {
-    very_light: "#bd9fc6",
-    light: "#A076AC",
-    medium: "#74557E",
-    dark: "#48304F"
+    lightest: "#EFD2F5",
+    light: "#D7A8E0",
+    medium: "#BF7ECC",
+    dark: "#A664B3",
+    darker: "#8D4A9B",
+    darkest: "#743083",
   },
-  grey: {
-    light: "#EAEAEB",
-    medium_light: "#CBCBCD",
-    medium: "#ABACAE",
-    dark: "#2C2F35"
+  brown: {
+    lightest: "#E0BC92",
+    light: "#C99151",
+    medium: "#AC5E06",
+    dark: "#904E04",
+    darker: "#743F03",
+    darkest: "#5A3000",
   },
-  orange: { light: "#f19348", medium: "#ac6a31", dark: "#6d3f13" },
-  yellow: { light: "#f4dc70", medium: "#ae9f51", dark: "#6c642f" },
-  brown: { light: "#bf9963", medium: "#8d7248", dark: "#574527" },
-  white: "#FFFFFF",
-  black: "#2c2f35"
-};
+}
 
 function getDefaultColor(code) {
-  return colors[code].light;
+  return colors[code].medium;
 }
 
 export { colors, getDefaultColor };
