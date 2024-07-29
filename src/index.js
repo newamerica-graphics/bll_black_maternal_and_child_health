@@ -10,7 +10,7 @@ const settings = {
     el.classList.remove('na-dataviz')
 
     let target = document.createElement("script")
-    target.src = "https://juliacraven.shorthandstories.com/black-maternal-and-child-health/embed.js"
+    target.src = "https://new-america.shorthandstories.com/b8e00597-b569-499d-b88d-76e5b9d5565e/embed.js"
     el.appendChild(target)
   }
 };
