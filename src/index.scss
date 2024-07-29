@@ -7,11 +7,11 @@
     font-weight: 700 !important;
   }
 
-  h3, h4, .Theme-HeaderContainer, .Theme-Story, .Theme-Caption p:not(:empty), .Theme-Footer .Theme-FooterTopLink, .Theme-NavigationLink {
+  h3, h4, h5, .Theme-HeaderContainer, .Theme-Story, .Theme-Caption p:not(:empty), .Theme-Footer .Theme-FooterTopLink, .Theme-NavigationLink {
     font-family: Circular, sans-serif !important;
   }
 
-  .Theme-story p, .Theme-Story .Theme-Footnote p, .Theme-Layer-BodyText p,
+  h6, p, .Theme-story p, .Theme-Story .Theme-Footnote p, .Theme-Layer-BodyText p,
   .Theme-Layer-TextBlock-Inner .Theme-Byline, .Theme-Layer-TextBlock-Inner .Theme-LeadIn, .Theme-Layer-TextBlock-Inner p {
     font-family: Lyon, serif !important;
     text-rendering: optimizeLegibility !important;
