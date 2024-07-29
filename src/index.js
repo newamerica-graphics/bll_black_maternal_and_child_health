@@ -7,6 +7,8 @@ const settings = {
     a && a.remove()
     b && b.remove()
 
+    el.classList.remove('na-dataviz')
+
     let target = document.createElement("script")
     target.src = "https://juliacraven.shorthandstories.com/black-maternal-and-child-health/embed.js"
     el.appendChild(target)

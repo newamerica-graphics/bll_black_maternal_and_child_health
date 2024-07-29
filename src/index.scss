@@ -1,6 +1,24 @@
-.na-dataviz {
-  a {
-    font-weight: normal;
-    color: #209B93;
+.dataviz {
+  margin-left: calc(-50vw + 50%);
+  width: 100vw;
+
+  h1, h2 {
+    font-family: Platform, serif !important;
+    font-weight: 700 !important;
   }
+
+  h3, h4, .Theme-HeaderContainer, .Theme-Story, .Theme-Caption p:not(:empty), .Theme-Footer .Theme-FooterTopLink, .Theme-NavigationLink {
+    font-family: Circular, sans-serif !important;
+  }
+
+  .Theme-story p, .Theme-Story .Theme-Footnote p, .Theme-Layer-BodyText p,
+  .Theme-Layer-TextBlock-Inner .Theme-Byline, .Theme-Layer-TextBlock-Inner .Theme-LeadIn, .Theme-Layer-TextBlock-Inner p {
+    font-family: Lyon, serif !important;
+    text-rendering: optimizeLegibility !important;
+  }
+
+  .Theme-FooterLogo--container {
+    display: none !important;
+  }
+
 }
