@@ -21,4 +21,16 @@
     display: none !important;
   }
 
+  .Theme-Story .Theme-Layer-BodyText-Highlight {
+    background-color: #2FBCB322;
+
+    &:hover {
+      background-color: #2FBCB344;
+    }
+
+    .Theme-Layer-BodyText-Highlight--Icon {
+      background-color: #2FBCB3;
+    }
+  }
+
 }
